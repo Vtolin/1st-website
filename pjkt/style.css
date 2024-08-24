@@ -1,0 +1,145 @@
+.profile {
+    background: linear-gradient(rgb(255, 255, 255), rgb(218, 218, 218), rgb(119, 119, 119), rgb(92, 92, 92), #202020);
+    background-size: 400% 400%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    min-width: 222px;
+    height: 180px;
+    border-bottom-right-radius: 40px;
+    animation: gradientAnimation 7s ease infinite; 
+}
+
+.btn5{
+    background: linear-gradient(rgb(255, 255, 255), rgb(218, 218, 218), rgb(119, 119, 119), rgb(92, 92, 92), #202020);
+    background-size: 400% 400%;
+    animation: gradientAnimation 7s ease infinite; 
+    border: none;
+    cursor: url("img/cursor.png"), auto;
+}
+
+.pfp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(163, 88, 18);
+}
+
+#speedSlider{
+    cursor: url('img/cursor.png'), auto;
+}
+
+h1 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+}
+
+marquee {
+    background-color: rgb(66, 12, 117);
+    width: 100%;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.abt {
+    margin-top: 70px;
+    position: relative;
+    width: 70%;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+body {
+    min-width: 300px;
+}
+
+.hey {
+    margin-top: -16px;
+    position: relative;
+    left: 73%;
+    width: 27.5%;
+    min-width: 15%;
+    background-color: rgb(72, 1, 131);
+    text-align: center;
+    height: 140px;
+}
+
+.h2 {
+    text-align: center;
+}
+
+.h2r {
+    font-size: 1.2rem;
+    color: white;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.abt::after, .abt::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(
+        from var(--angle),
+        transparent 1%,rgb(255, 0, 0),rgb(37, 115, 121),rgb(40, 16, 148),rgb(65, 47, 100),rgb(145, 42, 139),rgb(255, 0, 0)
+    );
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3px;
+    border-radius: 10px;
+    animation: spin 3s linear infinite;
+}
+
+.abt::before {
+    filter: blur(1.5rem);
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.btn1, .btn2, .btn3, .btn4{
+    width: 60%;
+    cursor: url('img/cursor.png'), auto;
+    margin-bottom: 5px;
+    background-color: rgb(78, 3, 139);
+    border: none;
+}
+
+.btn5:hover{
+    border-radius: 10px;
+    transition: background-color, border-radius 0.5s ease, color 0.5s ease;
+}
+
+.black{
+    background-color: #202020;
+    color: white;
+}
